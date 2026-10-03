@@ -1,0 +1,9 @@
+Prueba de program1 usando el entorno de program2:
+$ python_codes/program2/.venv/bin/python python_codes/program1/main.py
+Traceback (most recent call last):
+  File "/home/work/python_codes/program1/main.py", line 3, in <module>
+    mensualidades = np.array([650, 700, np.NaN, 675, 720])
+                                        ^^^^^^
+  File "/home/work/python_codes/program2/.venv/lib/python3.12/site-packages/numpy/__init__.py", line 763, in __getattr__
+    raise AttributeError(
+AttributeError: `np.NaN` was removed in the NumPy 2.0 release. Use `np.nan` instead.
