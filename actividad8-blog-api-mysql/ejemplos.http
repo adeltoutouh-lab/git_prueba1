@@ -1,0 +1,38 @@
+# Se puede utilizar con la extensión REST Client de VS Code.
+@baseUrl = http://localhost:3000
+
+### Consultar todos los autores
+GET {{baseUrl}}/api/autores
+
+### Consultar un autor
+GET {{baseUrl}}/api/autores/1
+
+### Crear un autor
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Lucía García",
+  "email": "lucia@example.com",
+  "imagen": "https://example.com/lucia.jpg"
+}
+
+### Ver todos los posts
+GET {{baseUrl}}/api/posts
+
+### Ver un post
+GET {{baseUrl}}/api/posts/1
+
+### Crear un post
+POST {{baseUrl}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Un artículo nuevo",
+  "descripcion": "Estoy probando la API con MySQL.",
+  "categoria": "Tecnología",
+  "autor_id": 1
+}
+
+### Ver los posts del autor 1
+GET {{baseUrl}}/api/autores/1/posts
